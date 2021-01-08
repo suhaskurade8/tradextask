@@ -1,0 +1,14 @@
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>title</th>
+      </tr>
+    </thead>
+    <tbody *ngFor='let user of globalDataService.__filteredUsersList | filterData : globalDataService.__searchBox'>
+      <tr>
+        <td (click)="globalDataService.__selectedUser=user.title">{{user.title}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
